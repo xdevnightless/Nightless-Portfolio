@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Nightless</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, red, black);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .about {
+      padding: 3rem 4rem;
+    }
+
+    .about h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill {
+      background: black;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: red;
+    }
+
+    .progress-bar {
+      position: relative;
+      background: black; /* Background of the bar */
+      height: 20px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: red; 
+      width: 0;
+      animation: progressAnimation 2s ease-in-out forwards;
+      border-radius: 10px;
+    }
+
+    @keyframes progressAnimation {
+      from {
+        width: 0;
+      }
+    }
+
+    .skill[data-skill="html"] .progress {
+      animation-delay: 0.2s;
+      width: 85%;
+    }
+
+    .skill[data-skill="css"] .progress {
+      animation-delay: 0.4s;
+      width: 90%;
+    }
+
+    .skill[data-skill="javascript"] .progress {
+      animation-delay: 0.6s;
+      width: 70%;
+    }
+
+    .skill[data-skill="python"] .progress {
+      animation-delay: 0.8s;
+      width: 40%;
+    }
+
+    .skill[data-skill="scss"] .progress {
+      animation-delay: 1s;
+      width: 80%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 4rem;
+      position: sticky;
+      top: 0;
+      background: linear-gradient(90deg, red, black);
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    nav .menu {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav .menu a:hover {
+      color: #ff5757;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Acceleration</div>
+    <div class="menu">
+      <a href="index.html">Home</a> 
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contacts.html">Contacts</a>
+    </div>
+  </nav>
+
+  <section class="about">
+    <h1>About Me</h1>
+    <p>Hello! I'm <strong>Nightless</strong>, a Full-Stack web developer. I enjoy working on proxies and developing my own proxy called Acceleration. Here are my skills:</p>
+
+    <div class="skills">
+      <div class="skill" data-skill="html">
+        <h3>HTML</h3>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <div class="skill" data-skill="css">
+        <h3>CSS</h3>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <div class="skill" data-skill="javascript">
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <div class="skill" data-skill="python">
+        <h3>Python</h3>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <div class="skill" data-skill="scss">
+        <h3>SCSS</h3>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
