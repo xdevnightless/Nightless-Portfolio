@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightless | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, red, black);
+      color: white;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+      width: 12px;
+      background-color: black;
+    }
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: black;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: red;
+    }
+    .projects {
+      padding: 3rem 4rem;
+      padding-top: 0;
+    }
+    .projects h1 {
+      font-size: 3rem;
+      color: black; 
+      margin-bottom: 2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .projects p {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .project-card {
+      background: black;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      padding: 1.5rem;
+      color: red;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .project-card.large {
+      flex: 1 1 600px;
+    }
+    .project-card.small {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+    .project-card h3 {
+      color: red;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .project-card.small h3 {
+      font-size: 1.5rem;
+    }
+    .project-card p {
+      color: red;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .project-card.small p {
+      font-size: 0.9rem;
+    }
+    .project-card .github-button {
+      margin-top: 1rem;
+      text-decoration: none;
+      background: grey;
+      color: black;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .project-card .github-button i {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+    .project-card .github-button:hover {
+      background: #444;
+      transform: translateY(-2px);
+    }
+    .project-card .github-button:hover i {
+      transform: rotate(360deg);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 4rem;
+      position: sticky;
+      top: 0;
+      background: linear-gradient(90deg, red, black);
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    nav .menu {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav .menu a:hover {
+      color: #ff5757;
+    }
+
+    nav .menu a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: #ff5757;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    nav .menu a:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Acceleration</div>
+    <div class="menu">
+      <a href="index.html">Home</a> 
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+    </div>
+  </nav>
+  <section class="projects">
+    <h1>My Projects</h1>
+    <p>Here are some of the projects I've worked on:</p>
+    <div class="project-grid">
+      <div class="project-card large">
+        <h3>Acceleration</h3>
+        <p>Experience the web with Acceleration the fastest proxy for seamless browsing, privacy, and 100+ games and apps. Perfect for students and anyone seeking speed and security.</p>
+        <a href="https://github.com/xdevnightless/Acceleration" class="github-button" target="_blank">
+          <i class="fa fa-github"></i> View our Github
+        </a>
+        <a href="https://discord.gg/Kvwzdt4WzJ" class="github-button" target="_blank">
+          <i class="fa fa-discord"></i> View our Discord server
+        </a>
+      </div>
+      <div class="project-card small">
+        <h3>Apex Network</h3>
+        <p>A cool Proxy thats in development.</p>
+        <a href="https://github.com/apexnetworkowner/apex-network22/blob/main/apps.html" class="github-button" target="_blank">
+          <i class="fab fa-github"></i> View our Github
+        </a>
+      </div>
+      <div class="project-card small">
+        <h3>Marine V2</h3>
+        <p>A proxy service with various features.</p>
+        <a href="https://github.com/Raf128/Marine-V2" class="github-button" target="_blank">
+          <i class="fa fa-github"></i> View our Github
+        </a>
+      </div>
+      <div class="project-card small">
+        <h3>Pulsar</h3>
+        <p>Pulsar V1 A fast proxy with games and apps.</p>
+        <a href="https://github.com/Yeti1o1/Pulsar" class="github-button" target="_blank">
+          <i class="fab fa-github"></i> View our Github
+        </a>
+      </div>
+      <div class="project-card small">
+        <h3>DM Network</h3>
+        <p>A web proxy that uses a static version of ultraviolet made by TIW to search the web freely, with a chat, games, apps, and customizable settings. Hostable on any static provider, including netlify! Please star (especially if you fork).</p>
+        <a href="https://github.com/dmnetworkowner/dm-network" class="github-button" target="_blank">
+          <i class="fa fa-github"></i> View our Github
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
