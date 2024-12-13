@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightless | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #000, #ff0000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px;
+      background-color: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #ff5a5a;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 4rem;
+      position: sticky;
+      top: 0;
+      background: linear-gradient(90deg, #ff0000, #000);
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .nav-links a {
+      text-decoration: none;
+      color: #fff; /* Set navigation link color to white */
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav .nav-links a:hover {
+      color: #fff; /* Ensure hover color stays white */
+    }
+
+    nav .nav-links a::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background: #ff5757;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    nav .nav-links a:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    nav .brand-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff; 
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .intro-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 4rem;
+      height: 100vh;
+      position: relative;
+    }
+
+    .intro-section .intro-text {
+      flex: 1;
+      max-width: 50%;
+      animation: fadeInFromLeft 1.5s ease-in-out;
+    }
+
+    .intro-section h1 {
+      font-size: 3rem;
+      color: #fff; 
+      margin: 0.5rem 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .intro-section h1 span {
+      color: #9a6fff;
+    }
+
+    .intro-section p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .intro-section .typing-text {
+      color: #9a6fff;
+      font-size: 2rem;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    .intro-section img {
+      max-width: 340px;
+      animation: fadeInFromRight 1.5s ease-in-out;
+      border-radius: 50%;
+      border: 3px solid #9a6fff;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand-name">Acceleration</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contacts.html">Contacts</a>
+    </div>
+  </nav>
+
+  <section class="intro-section" id="home">
+    <div class="intro-text">
+      <h1>Hi There! 👋</h1>
+      <h1>Hey I'm Nightless</h1>
+      <h1>I'm A Full Stacked Web Developer</h1>
+    </div>
+  </section>
+
+</body>
+</html>
